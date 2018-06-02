@@ -8,6 +8,7 @@ echo "Starting deploy to https://shobh.it"
 
 # Build the docs page locally
 export JEKYLL_ENV="production"
+bundle install
 bundle exec jekyll build
 
 # Bots need names too
@@ -20,7 +21,7 @@ rm -rf "/tmp/shobh.it"
 cp -R "_site/" "/tmp/shobh.it"
 
 # Check out gh-pages and clear all files
-git reset --hard HEAD # we don't want the `git checkout` to cause issues (e.g. https://circleci.com/gh/fastlane/docs/730)
+git reset --hard HEAD # we don't want the `git checkout` to cause issues
 git checkout -b gh-pages
 git remote add upstream "https://$GH_TOKEN@github.com/shobhitsharma/website.git"
 git pull
