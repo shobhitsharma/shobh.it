@@ -9,8 +9,12 @@ layout: default
         {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
         {{ page.date | date: date_format }}
       </time>
-      {% if page.tags.size > 0 %}
-        &nbsp; • &nbsp; {{ page.tags | join: ', ' }} 
+      {% if page.tags.size > 0 %} &nbsp; • &nbsp;
+        <span class="post-tags">
+          {% for tag in page.tags %}
+            <a class="tag">{{ tag }}</a>
+          {% endfor %}
+        </span>
       {% endif %}
       &nbsp; • &nbsp; {% include fork.html %}
   </header>

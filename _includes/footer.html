@@ -1,8 +1,10 @@
 <footer class="site-footer">
   <div class="wrapper">
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-2">© <span id="current-year">2018</span>&nbsp; • &nbsp;Shobhit Sharma</div>
-      <div class="footer-col footer-col-1">
+      <div class="footer-col footer-col-5">
+        © <span id="current-year">2018</span> Shobhit Sharma
+        &nbsp; • &nbsp; {% include source.html %}
+        &nbsp; • &nbsp; 
         <a href="/archive" class="page-link {% if page.url == " /archive " %}active{% endif %}">Archive</a>
         &nbsp; • &nbsp;
         <a href="/imprint" class="page-link {% if page.url == " /imprint " %}active{% endif %}">Imprint</a>
@@ -20,4 +22,7 @@
     }
   }
   document.getElementById('current-year').innerHTML = new Date().getFullYear();
+  if (window.feather) {
+    feather.replace();
+  }
 </script>

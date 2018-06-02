@@ -8,6 +8,7 @@ tags:
 status: publish
 type: post
 published: true
+image: "https://cdn01.onzu.com/2017/4/14/0/embedo.png"
 meta: {}
 ---
 

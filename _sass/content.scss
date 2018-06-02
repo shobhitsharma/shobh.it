@@ -1,5 +1,14 @@
 $title-color: #111;
 $title-inactive-color: #9c9c9c;
+.icon>svg path {
+  fill: transparent;
+}
+
+.feather {
+  width: 14px;
+  height: 14px;
+}
+
 .subscribe-form {
   button {
     display: inline-block;
@@ -23,6 +32,12 @@ $title-inactive-color: #9c9c9c;
   input[type="text"] {
     width: calc(100% - 140px);
   }
+  a {
+    color: $link-color;
+    &:visited {
+      color: $link-color;
+    }
+  }
 }
 
 .subscribe-newsletter {
@@ -42,6 +57,40 @@ $title-inactive-color: #9c9c9c;
 .pagination {
   text-align: center;
   margin-right: 40px;
+}
+
+.post-image {
+  background: $border-color;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -ms-background-size: cover;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.posts-list {
+  article {
+    border: 1px solid $border-color;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: box-shadow 0.15s ease;
+    &:hover {
+      box-shadow: 0 2px 8px rgba(236, 236, 236, 0.75);
+    }
+  }
+  .post {
+    min-height: 135px;
+  }
+  .post-image {
+    display: table-cell;
+    width: 200px;
+    height: 135px;
+  }
+  .post-details {
+    display: table-cell;
+    padding-left: 15px;
+  }
 }
 
 .post-content {
@@ -97,9 +146,12 @@ $title-inactive-color: #9c9c9c;
   }
 }
 
-.home {
-  article {
-    margin-bottom: 70px;
+.post-tags {
+  .tag {
+    border: 1px solid $border-color;
+    font-size: 85%;
+    padding: 3px 5px;
+    border-radius: 5px;
   }
 }
 
