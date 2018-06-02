@@ -1,5 +1,5 @@
 $title-color: #111;
-$header-inactive-color: #9c9c9c;
+$title-inactive-color: #9c9c9c;
 .subscribe-form {
   button {
     display: inline-block;
@@ -42,10 +42,6 @@ $header-inactive-color: #9c9c9c;
 .pagination {
   text-align: center;
   margin-right: 40px;
-}
-
-a.forkButton {
-  text-decoration: none;
 }
 
 .post-content {
@@ -114,10 +110,10 @@ a.forkButton {
 
 .post-title {
   a {
-    color: $title-color !important;
+    color: $title-color;
     text-decoration: none;
     &:hover {
-      color: #0037F5 !important;
+      color: #0037F5;
     }
   }
   font-weight: 600;
@@ -141,24 +137,15 @@ a.forkButton {
     margin-top: 30px;
     text-decoration: none;
   }
-  .trigger {
+  .navigation-items {
     margin-top: 20px;
-    a.active {
-      color: $title-color !important;
-      &:visited {
-        color: $title-color !important;
-      }
-    }
     a {
+      color: $title-inactive-color;
       margin-right: 20px;
       padding-left: 10px;
       text-decoration: none;
-      color: $header-inactive-color;
-      &:visited {
-        color: $header-inactive-color !important;
-      }
-      &:hover {
-        text-decoration: none;
+      &.active {
+        color: $title-color;
       }
     }
   }
@@ -250,4 +237,16 @@ a.forkButton {
       }
     }
   }
+}
+
+.highlighter-rouge {
+  .highlight {
+    background: $background-color-lite;
+    border-radius: 5px;
+  }
+}
+
+.side-projects-note {
+  font-size: 14px;
+  line-height: 1.4;
 }
