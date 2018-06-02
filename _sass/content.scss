@@ -1,0 +1,253 @@
+$title-color: #111;
+$header-inactive-color: #9c9c9c;
+.subscribe-form {
+  button {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background-color: #272727;
+    color: white;
+    font-style: normal;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+  }
+  input[type="text"] {
+    font-size: 14px;
+    padding: 5px;
+  }
+}
+
+.site-footer {
+  input[type="text"] {
+    width: calc(100% - 140px);
+  }
+}
+
+.subscribe-newsletter {
+  color: rgba(68, 68, 68, 0.7);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+/* Hide sidebar on mobile devices */
+
+@media screen and (min-width: $no-sidebar) {
+  #sidebar {
+    display: inline;
+  }
+}
+
+.pagination {
+  text-align: center;
+  margin-right: 40px;
+}
+
+a.forkButton {
+  text-decoration: none;
+}
+
+.post-content {
+  img {
+    max-width: calc(100% - 10px);
+  }
+  img.inline-img {
+    margin: 20px;
+  }
+  h1 {
+    border-bottom: rgb(234, 236, 239);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    font-size: 32px;
+    color: rgb(36, 41, 46);
+    line-height: 40px;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 15px;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #eaecef;
+    line-height: 1.25;
+    color: rgb(36, 41, 46) !important;
+    margin-top: 24px;
+    margin-bottom: 15px;
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #24292e !important;
+    line-height: 25px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+  h4 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+  h5 {
+    color: rgb(36, 41, 46);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17.5px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+}
+
+.home {
+  article {
+    margin-bottom: 70px;
+  }
+}
+
+.wrapper {
+  max-width: -webkit-calc(340px + #{$content-width} - (#{$spacing-unit} * 2)) !important;
+  max-width: calc(340px + #{$content-width} - (#{$spacing-unit} * 2)) !important;
+}
+
+.post-title {
+  a {
+    color: $title-color !important;
+    text-decoration: none;
+    &:hover {
+      color: #0037F5 !important;
+    }
+  }
+  font-weight: 600;
+  @include relative-font-size(2);
+  letter-spacing: 0px;
+  line-height: 1.4em;
+  @include media-query($on-laptop) {
+    @include relative-font-size(2);
+  }
+}
+
+.site-header {
+  border-top: none;
+  border-bottom: none;
+  height: 150px;
+  .site-title {
+    color: $title-color;
+    font-weight: 700;
+    line-height: 1.2em;
+    font-size: 32px;
+    margin-top: 30px;
+    text-decoration: none;
+  }
+  .trigger {
+    margin-top: 20px;
+    a.active {
+      color: $title-color !important;
+      &:visited {
+        color: $title-color !important;
+      }
+    }
+    a {
+      margin-right: 20px;
+      padding-left: 10px;
+      text-decoration: none;
+      color: $header-inactive-color;
+      &:visited {
+        color: $header-inactive-color !important;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* Mobile view, the header buttons were misaligned without this */
+
+@media screen and (max-width: 600px) {
+  .site-nav .page-link {
+    margin-right: 0 !important;
+  }
+}
+
+.site-title {
+  color: $font-color !important;
+}
+
+.post-meta {
+  margin-top: -5px;
+  * {
+    color: $font-color-lite;
+  }
+}
+
+.page-content {
+  padding-top: 0px;
+  .home {
+    .post-title {
+      font-weight: 600;
+      @include relative-font-size(1.4);
+      letter-spacing: 0px;
+      line-height: 1.4em;
+      @include media-query($on-laptop) {
+        @include relative-font-size(1.4);
+      }
+    }
+    .post-meta {
+      margin-top: -10px;
+    }
+  }
+}
+
+.archive-post-list {
+  .archive-post-year {
+    border-left: 1px solid $border-color;
+    padding-left: 25px;
+    margin-bottom: 50px;
+    .archive-post-articles {
+      display: block;
+      width: 100%;
+      .archive-tag {
+        font-size: 80%;
+        color: $font-color-lite;
+        margin: 0;
+        width: 150px;
+        text-align: right;
+        padding-right: 15px;
+      }
+      .archive-title {
+        color: $link-color;
+      }
+    }
+  }
+  h1 {
+    font-weight: 700;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      display: table;
+      width: 100%;
+      span {
+        display: table-cell;
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .archive-post-articles {
+      ul li {
+        margin-bottom: 15px;
+        span {
+          display: block;
+        }
+      }
+      .archive-tag {
+        text-align: left !important;
+      }
+    }
+  }
+}
