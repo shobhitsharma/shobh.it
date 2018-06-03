@@ -20,7 +20,7 @@ Strelitzer Str. 55,
 ## Kontakt  
 
 Fax: +4932226441201  
-E-Mail: [shobhit-sharma[at]hotmail.com](mailto:shobhit-sharma@hotmail.com)  
+E-Mail: [hi@shobh.it](mailto:hi@shobh.it)  
 
 ## Haftung für Links  
 

@@ -119,10 +119,10 @@ $post-meta-color: #666666;
 
 .post-tags {
   .tag {
-    border: 1px solid $border-color;
     font-size: 85%;
-    padding: 3px 5px;
-    border-radius: 5px;
+    padding: 1px 5px 3px 5px;
+    border-radius: 3px;
+    background: $border-color;
   }
 }
 

@@ -19,7 +19,7 @@ Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der V
 Shobhit, Sharma  
 Strelitzer Str. 55,  
 10115 Berlin Deutschland  
-E-Mailadresse: shobhit-sharma[at]hotmail.com  
+E-Mailadresse: hi@shobh.it  
 Geschäftsführer/ Inhaber: Shobhit/n (sofern vorhanden)  
 Link zum Impressum: http://shobh.it/imprint  
 
