@@ -19,7 +19,8 @@
   <meta name="theme-color" content="#000000">
   <meta name="google-site-verification" content="jEcFG1hwJGphfJ8IEFCN9bVzwmKQwJcxCcjyTE4esu4" />
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  {% assign today = site.time | date: '%s' %}
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}?version={{today}}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
   {% if jekyll.environment == 'production' and site.google_analytics %}
     {% include analytics.html %}
