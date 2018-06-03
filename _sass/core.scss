@@ -1,8 +1,9 @@
+$background-color: #ffffff;
+$background-color-lite: #f1f2f3;
 $font-color: #353535;
 $font-color-lite: #7d7d7d;
 $link-color: #0014bd;
 $border-color: #f1f2f3;
-$background-color-lite: #f1f2f3;
 $no-sidebar: "800px";
 * {
   color: $font-color;
@@ -42,6 +43,7 @@ body {
   min-height: 100%;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
+  background-color: $background-color;
 }
 
 p {
