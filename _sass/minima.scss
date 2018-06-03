@@ -45,6 +45,3 @@ $on-laptop : 800px !default;
 
 // Import partials.
 @import "minima/base", "minima/layout", "minima/syntax-highlighting";
-
-// Override custom styles
-@import "core", "header", "sidebar", "content", "footer";
