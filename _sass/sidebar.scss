@@ -48,3 +48,9 @@
     }
   }
 }
+
+@media screen and (min-width: $no-sidebar) {
+  #sidebar {
+    display: inline;
+  }
+}

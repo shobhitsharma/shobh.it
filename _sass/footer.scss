@@ -1,0 +1,11 @@
+.site-footer {
+  input[type="text"] {
+    width: calc(100% - 140px);
+  }
+  a {
+    color: $link-color;
+    &:visited {
+      color: $link-color;
+    }
+  }
+}

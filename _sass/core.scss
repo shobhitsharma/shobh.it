@@ -34,8 +34,8 @@ body {
 
 html,
 body {
-  font-family: 'Karla', sans-serif;
-  line-height: 1.4;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
@@ -135,4 +135,20 @@ code {
   border: none;
   background: transparent;
   line-height: 1.6;
+}
+
+.icon>svg path {
+  fill: transparent;
+}
+
+.feather {
+  width: 14px;
+  height: 14px;
+}
+
+.highlighter-rouge {
+  .highlight {
+    background: $background-color-lite;
+    border-radius: 5px;
+  }
 }

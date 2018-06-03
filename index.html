@@ -13,6 +13,7 @@ title: Home
       {% endif %}
       <div class="post-details">
         <h1 class="post-title" itemprop="name headline"><a href="{{ post.url }}">{{ post.title | escape }}</a></h1>
+        <p class="post-excerpt">{{ post.content | strip_html | truncatewords:35 }}</p>
         <p class="post-meta">
           <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
             {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
@@ -25,23 +26,14 @@ title: Home
               </span>
             {% endif %}
           </time>
+          &nbsp; • &nbsp; {{ post.content | read_time }}
           {% if post.author %}
-            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author }}</span></span>
+            &nbsp; • &nbsp; 
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span itemprop="name">{{ post.author }}</span>
+            </span>
           {% endif %}</p>
       </div>
-
-      <!-- <div class="post-content" itemprop="articleBody">
-        {{ post.content }}
-
-        {% include side-projects.html %}
-      </div> -->
-
-      <!-- <p class="extra-info">
-        {% if post.tags.size > 0 %}
-          Tags: {{ post.tags | join: ', ' }} &nbsp; | &nbsp; 
-        {% endif %}
-        {% include fork.html %}
-      </p> -->
     </article>
   {% endfor %}
 
