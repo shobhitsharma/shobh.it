@@ -10,6 +10,7 @@ type: post
 published: true
 image: "https://cdn01.onzu.com/2017/4/14/0/embedo.png"
 meta: {}
+comments: true
 ---
 
 **Embedo** adds a layer on top of third party embed APIs while ensuring best practices and native guidelines for each component. It takes cares of resizing the container, emitting necessary events and with support for native and external options to be pass along.
