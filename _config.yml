@@ -30,6 +30,8 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-twitter-plugin
+  - jekyll-autoprefixer
+  - jekyll-sitemap
 permalink: /blog/:title
 paginate: 10
 paginate_path: "/blog/page:num/"
