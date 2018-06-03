@@ -31,6 +31,7 @@ body {
   border: 0;
   font: inherit;
   vertical-align: baseline;
+  background: $background-color;
 }
 
 html,
@@ -43,7 +44,6 @@ body {
   min-height: 100%;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
-  background-color: $background-color !important;
 }
 
 p {
