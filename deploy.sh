@@ -11,6 +11,7 @@ git pull origin master
 # Build the docs page locally
 export JEKYLL_ENV="production"
 bundle install
+bundle exec jekyll clean
 bundle exec jekyll build
 
 # Assign permissions
