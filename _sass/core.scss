@@ -79,8 +79,8 @@ h3 {
 }
 
 hr {
-  color: #bbb;
-  background-color: #bbb;
+  color: $border-color;
+  background-color: $border-color;
   height: 1px;
   flex: 0 1 auto;
   margin: 1em 0;
