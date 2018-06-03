@@ -40,15 +40,15 @@ title: Home
   <!-- Pagination links -->
   <div class="pagination">
     {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path }}" class="previous">Newer</a>
+      <a href="{{ paginator.previous_page_path }}" class="previous"><i data-feather="arrow-left"></i> Newer</a>
     {% else %}
-      <span class="previous">Newer</span>
+      <span class="previous"><i data-feather="arrow-left"></i> Newer</span>
     {% endif %}
     /
     {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}" class="next">Older</a>
+      <a href="{{ paginator.next_page_path }}" class="next">Older <i data-feather="arrow-right"></i></a>
     {% else %}
-      <span class="next ">Older</span>
+      <span class="next">Older <i data-feather="arrow-right"></i></span>
     {% endif %}
   </div>
 </div>

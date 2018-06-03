@@ -9,6 +9,20 @@ $post-meta-color: #666666;
 
 .pagination {
   text-align: center;
+  .next,
+  .previous {
+    background-color: $border-color;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  a {
+    color: $title-color;
+    &:hover {
+      color: $link-color;
+    }
+  }
 }
 
 .post-image {
