@@ -2,14 +2,13 @@ $title-color: #111;
 $title-inactive-color: #9c9c9c;
 $post-meta-color: #666666;
 
-.pagination {
-  text-align: center;
-  margin-right: 40px;
-}
-
 .wrapper {
   max-width: -webkit-calc(340px + #{$content-width} - (#{$spacing-unit} * 2)) !important;
   max-width: calc(340px + #{$content-width} - (#{$spacing-unit} * 2)) !important;
+}
+
+.pagination {
+  text-align: center;
 }
 
 .post-image {
@@ -59,6 +58,8 @@ $post-meta-color: #666666;
     .post-details {
       display: block;
       width: 100%;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
     }
   }
 }
