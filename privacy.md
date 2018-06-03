@@ -17,9 +17,8 @@ Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der V
 ### Verantwortlicher
 
 Shobhit, Sharma  
-Straße Hausnr.  
 10115 Berlin Deutschland  
-E-Mailadresse: hi@shobh.it  
+E-Mailadresse: shobhit-sharma@hotmail.com  
 Geschäftsführer/ Inhaber: Shobhit/n (sofern vorhanden)  
 Link zum Impressum: http://shobh.it/imprint  
 
