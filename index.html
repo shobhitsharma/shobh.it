@@ -4,6 +4,7 @@ title: Home
 ---
 
 <div class="home posts-list">
+  {% include author.html %}
   {% for post in paginator.posts %}
     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
       {% if post.image %}

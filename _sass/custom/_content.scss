@@ -3,8 +3,7 @@ $title-inactive-color: #9c9c9c;
 $post-meta-color: #666666;
 
 .wrapper {
-  max-width: -webkit-calc(340px + #{$content-width} - (#{$spacing-unit} * 2)) !important;
-  max-width: calc(340px + #{$content-width} - (#{$spacing-unit} * 2)) !important;
+  max-width: 750px;
 }
 
 .pagination {
@@ -38,17 +37,17 @@ $post-meta-color: #666666;
   font-size: 14px;
   margin-top: -10px;
   margin-bottom: 25px;
+  min-height: 60px;
   line-height: 1.5;
 }
 
 .posts-list {
   article {
-    border: 1px solid $border-color;
     padding: 0;
     margin-bottom: $spacing-unit;
-    transition: box-shadow 0.15s ease;
+    
     &:hover {
-      box-shadow: 0 2px 8px rgba(236, 236, 236, 0.75);
+      // box-shadow: 0 2px 8px rgba(236, 236, 236, 0.75);
     }
   }
   .post {
@@ -61,7 +60,8 @@ $post-meta-color: #666666;
   }
   .post-details {
     display: table-cell;
-    padding: 15px;
+    padding: 0 15px;
+    vertical-align: top;
   }
   .post-meta {
     margin-bottom: 0;
@@ -165,7 +165,7 @@ $post-meta-color: #666666;
 .site-header {
   border-top: none;
   border-bottom: none;
-  height: 150px;
+  height: 100px;
   .site-title {
     color: $title-color;
     font-weight: 700;

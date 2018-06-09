@@ -25,11 +25,12 @@
 }
 
 .site-nav {
-  float: right;
+  width: 100%;
+  text-align: center;
   line-height: $base-line-height * $base-font-size * 2.25;
 
   .nav-trigger {
-      display: none;
+    display: none;
   }
 
   .menu-icon {

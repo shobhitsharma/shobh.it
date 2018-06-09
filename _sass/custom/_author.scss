@@ -1,12 +1,9 @@
-#sidebar {
-  float: right;
-  top: 75px;
-  right: 0;
-  width: 269px;
+#author {
   padding: 20px;
-  margin-left: 60px;
   padding-top: 0px;
-  border-left: 1px solid #EEE;
+  margin-bottom: 15px;
+  text-align: center;
+  border-bottom: 1px solid #EEE;
   a {
     text-decoration: none;
     span {
@@ -42,6 +39,8 @@
   }
   .social-media-list {
     display: table;
+    width: 150px;
+    margin: 0 auto;
     li {
       display: table-cell;
       min-width: 30px;
@@ -50,7 +49,7 @@
 }
 
 @media screen and (min-width: $no-sidebar) {
-  #sidebar {
-    display: inline;
+  #author {
+    display: block;
   }
 }

@@ -64,12 +64,6 @@ article {
   max-width: calc(100%);
 }
 
-@media screen and (min-width: $no-sidebar) {
-  article {
-    max-width: calc(100% - 360px);
-  }
-}
-
 a {
   color: $link-color;
   text-decoration: none;
@@ -108,4 +102,4 @@ code {
   }
 }
 
-@import "custom/header", "custom/sidebar", "custom/content", "custom/footer";
+@import "custom/header", "custom/author", "custom/content", "custom/footer";
