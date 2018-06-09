@@ -2,8 +2,16 @@ $title-color: #111;
 $title-inactive-color: #9c9c9c;
 $post-meta-color: #666666;
 
-.wrapper {
-  max-width: $content-width;
+.page-content {
+  .home {
+    width: $content-width;
+    margin: 0 auto;
+  }
+}
+
+.post-content {
+  width: $content-width;
+  margin: 0 auto;
 }
 
 .pagination {
@@ -20,6 +28,26 @@ $post-meta-color: #666666;
     color: $title-color;
     &:hover {
       color: $link-color;
+    }
+  }
+}
+
+.post {
+  .post-header {
+    display: table;
+    width: 1024px;
+    margin: 25px auto;
+    .post-cover {
+      display: table-cell;
+      position: relative;
+      width: 50%;
+      vertical-align: middle;
+      padding-right: 25px;
+    }
+    .post-image {
+      display: table-cell;
+      width: 50%;
+      height: 300px;
     }
   }
 }
@@ -45,10 +73,6 @@ $post-meta-color: #666666;
   article {
     padding: 0;
     margin-bottom: $spacing-unit;
-    
-    &:hover {
-      // box-shadow: 0 2px 8px rgba(236, 236, 236, 0.75);
-    }
   }
   .post {
     min-height: 135px;

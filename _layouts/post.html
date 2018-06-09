@@ -3,27 +3,37 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline"><a href="{{ page.url }}">{{ page.title | escape }}</a></h1>
-    <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        {{ page.date | date: date_format }}
-      </time>
-      {% if page.tags.size > 0 %} &nbsp; • &nbsp;
-        <span class="post-tags">
-          {% for tag in page.tags %}
-            <a class="tag">{{ tag }}</a>
-          {% endfor %}
-        </span>
-      {% endif %}
-      &nbsp; • &nbsp; {% include fork.html %}
+    <div class="post-cover">
+      <h1 class="post-title" itemprop="name headline">
+        <a href="{{ page.url }}">{{ page.title | escape }}</a>
+      </h1>
+      <p class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+          {{ page.date | date: date_format }}
+        </time>
+        {% if page.tags.size > 0 %} &nbsp; • &nbsp;
+          <span class="post-tags">
+            {% for tag in page.tags %}
+              <a class="tag">{{ tag }}</a>
+            {% endfor %}
+          </span>
+        {% endif %}
+        &nbsp; • &nbsp; {% include fork.html %}
+      </p>
+    </div>
+    {% if page.image %}
+      <div class="post-image" style="background-image: url({{ page.image }});"></div>
+    {% else %}
+    <div class="post-image"></div>
+    {% endif %}
   </header>
   <div class="post-content" itemprop="articleBody">
     {{ content }}
     {% include side-projects.html %}
+    {% if page.comments %}
+    <div id="disqus_thread"></div>
   </div>
-  {% if page.comments %}
-  <div id="disqus_thread"></div>
   <script>
     (function() {
     var d = document, s = d.createElement('script');
