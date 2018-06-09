@@ -3,7 +3,7 @@ $title-inactive-color: #9c9c9c;
 $post-meta-color: #666666;
 
 .wrapper {
-  max-width: 750px;
+  max-width: $content-width;
 }
 
 .pagination {

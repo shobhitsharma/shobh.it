@@ -63,6 +63,8 @@ body {
        -o-font-feature-settings: "kern" 1;
           font-feature-settings: "kern" 1;
   font-kerning: normal;
+  width: $content-width;
+  margin: 0 auto;
 }
 
 
