@@ -2,6 +2,10 @@ $title-color: #111;
 $title-inactive-color: #9c9c9c;
 $post-meta-color: #666666;
 
+.page-wrapper {
+  max-width: $content-width;
+}
+
 .page-content {
   .home {
     width: $content-width;
