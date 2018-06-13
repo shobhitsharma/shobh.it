@@ -13,6 +13,11 @@ $post-meta-color: #666666;
   }
 }
 
+.profile-image {
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
 .post-content {
   width: $content-width;
   margin: 0 auto;
