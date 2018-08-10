@@ -1,6 +1,9 @@
 @charset "utf-8";
+
 // Define defaults for each variable.
-$base-font-family: 'Source Sans Pro', sans-serif !default;
+$base-font-family: 'Rubik', sans-serif !default;
+$base-font-family-bold: 'Rubik', sans-serif !default;
+$code-font-family: 'Fira Mono', sans-serif !default;
 $base-font-size : 16px !default;
 $base-font-weight: 400 !default;
 $small-font-size : $base-font-size * 0.875 !default;
@@ -9,7 +12,7 @@ $spacing-unit : 30px !default;
 $text-color : #111 !default;
 $background-color: #fff !default;
 $background-color-lite: #f1f2f3;
-$brand-color : #2a7ae2 !default;
+$brand-color : #0014bd !default;
 $grey-color : #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark : darken($grey-color, 25%) !default;

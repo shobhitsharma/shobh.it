@@ -1,7 +1,4 @@
 p {
-  line-height: 24px;
-  font-weight: 400;
-  font-size: 16px;
   color: $font-color;
 }
 
@@ -11,12 +8,11 @@ ul {
 
 li {
   color: $font-color;
-  font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
 }
 
-li+li {
+li + li {
   margin-top: 0.25em;
 }
 
@@ -43,7 +39,7 @@ hr {
 }
 
 small {
-  color: rgba(68, 68, 68, 0.70);
+  color: rgba(68, 68, 68, 0.7);
 }
 
 blockquote {
@@ -55,7 +51,6 @@ blockquote {
   padding: 0 1em;
   * {
     font-style: normal !important;
-    letter-spacing: 0;
     color: $font-color-lite;
   }
 }
@@ -72,20 +67,29 @@ a {
   }
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+b {
+  font-family: $base-font-family-bold;
+}
+
 svg {
   vertical-align: middle;
 }
 
 pre,
 code {
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
-  font-size: 12px;
+  font-family: $code-font-family;
+  font-size: 13px;
   border: none;
   background: transparent;
   line-height: 1.6;
 }
 
-.icon>svg path {
+.icon > svg path {
   fill: transparent;
 }
 

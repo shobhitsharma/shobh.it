@@ -1,9 +1,23 @@
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
   margin: 0;
   padding: 0;
 }
@@ -28,12 +42,28 @@ html {
   border: 0;
   font: inherit;
   vertical-align: baseline;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
+  -webkit-font-feature-settings: "kern";
+  font-feature-settings: "kern";
+  -webkit-font-variant-ligatures: common-ligatures;
+  font-variant-ligatures: common-ligatures;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
   border: 0;
   font: inherit;
   vertical-align: baseline;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 html,
@@ -41,58 +71,56 @@ body {
   font-family: $base-font-family;
   line-height: $base-line-height;
   overflow-x: hidden;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
   min-height: 100%;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
 }
-
-
 
 /**
  * Basic styling
  */
+
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
-  -webkit-font-feature-settings: "kern" 1;
-     -moz-font-feature-settings: "kern" 1;
-       -o-font-feature-settings: "kern" 1;
-          font-feature-settings: "kern" 1;
   font-kerning: normal;
 }
-
-
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
 %vertical-rhythm {
   margin-bottom: $spacing-unit / 2;
 }
 
-
-
 /**
  * Images
  */
+
 img {
   max-width: 100%;
   vertical-align: middle;
 }
 
-
-
 /**
  * Figures
  */
-figure > img {
+
+figure>img {
   display: block;
 }
 
@@ -100,80 +128,76 @@ figcaption {
   font-size: $small-font-size;
 }
 
-
-
 /**
  * Lists
  */
-ul, ol {
+
+ul,
+ol {
   margin-left: $spacing-unit;
 }
 
 li {
-  > ul,
-  > ol {
+  >ul,
+  >ol {
     margin-bottom: 0;
   }
 }
 
-
-
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: $base-font-weight;
 }
-
-
 
 /**
  * Links
  */
+
 a {
   color: $brand-color;
   text-decoration: none;
-
   &:visited {
     color: darken($brand-color, 15%);
   }
-
   &:hover {
     color: $text-color;
     text-decoration: underline;
   }
-
   .social-media-list &:hover {
     text-decoration: none;
-
     .username {
       text-decoration: underline;
     }
   }
 }
 
-
 /**
  * Blockquotes
  */
+
 blockquote {
   color: $grey-color;
   border-left: 4px solid $grey-color-light;
   padding-left: $spacing-unit / 2;
   @include relative-font-size(1.125);
-  letter-spacing: -1px;
   font-style: italic;
-
   > :last-child {
     margin-bottom: 0;
   }
 }
 
-
-
 /**
  * Code formatting
  */
+
 pre,
 code {
   @include relative-font-size(0.9375);
@@ -189,54 +213,48 @@ code {
 pre {
   padding: 8px 12px;
   overflow-x: auto;
-
-  > code {
+  >code {
     border: 0;
     padding-right: 0;
     padding-left: 0;
   }
 }
 
-
-
 /**
  * Wrapper
  */
+
 .wrapper {
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-unit;
   padding-left: $spacing-unit;
   @extend %clearfix;
-
   @include media-query($on-laptop) {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    max-width : calc(#{$content-width} - (#{$spacing-unit}));
     padding-right: $spacing-unit / 2;
     padding-left: $spacing-unit / 2;
   }
 }
 
-
-
 /**
  * Clearfix
  */
+
 %clearfix:after {
   content: "";
   display: table;
   clear: both;
 }
 
-
-
 /**
  * Icons
  */
-.icon > svg {
+
+.icon>svg {
   display: inline-block;
   vertical-align: middle;
-
   path {
     fill: $grey-color;
   }
@@ -246,17 +264,15 @@ pre {
   .icon {
     padding-right: 5px;
   }
-
-  li + li {
+  li+li {
     padding-top: 5px;
   }
 }
 
-
-
 /**
  * Tables
  */
+
 table {
   margin-bottom: $spacing-unit;
   width: 100%;
@@ -269,7 +285,8 @@ table {
       background-color: lighten($grey-color-light, 6%);
     }
   }
-  th, td {
+  th,
+  td {
     padding: ($spacing-unit / 3) ($spacing-unit / 2);
   }
   th {

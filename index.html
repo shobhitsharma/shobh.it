@@ -7,11 +7,11 @@ title: Home
   {% include author.html %}
   {% for post in paginator.posts %}
     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-      {% if post.image %}
+      <!-- {% if post.image %}
         <div class="post-image" style="background-image: url({{ post.image }});"></div>
       {% else %}
       <div class="post-image"></div>
-      {% endif %}
+      {% endif %} -->
       <div class="post-details">
         <h1 class="post-title" itemprop="name headline">
           <a href="{{ post.url }}">{{ post.title | escape }}</a>
@@ -41,17 +41,19 @@ title: Home
   {% endfor %}
 
   <!-- Pagination links -->
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path }}" class="previous"><i data-feather="arrow-left"></i> Newer</a>
-    {% else %}
-      <span class="previous"><i data-feather="arrow-left"></i> Newer</span>
+  {% if paginator.posts.length > 5 %}
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="previous"><i data-feather="arrow-left"></i> Newer</a>
+      {% else %}
+        <span class="previous"><i data-feather="arrow-left"></i> Newer</span>
+      {% endif %}
+      /
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="next">Older <i data-feather="arrow-right"></i></a>
+      {% else %}
+        <span class="next">Older <i data-feather="arrow-right"></i></span>
+      {% endif %}
+    </div>
     {% endif %}
-    /
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}" class="next">Older <i data-feather="arrow-right"></i></a>
-    {% else %}
-      <span class="next">Older <i data-feather="arrow-right"></i></span>
-    {% endif %}
-  </div>
 </div>
