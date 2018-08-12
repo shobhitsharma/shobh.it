@@ -12,8 +12,14 @@ module FetchProjects
     def render(context)
       if /(.+) from url (.+)/.match(@text)
         resp = Net::HTTP.get_response(URI($2.strip))
-        data = resp.body
-        context[$1] = JSON[data].sort_by! { |x| Date.parse x['updated_at'] }.reverse!
+        data = JSON resp.body
+        # Filter and sort repositories
+        if data.length > 0
+          data = data.select { |repo| repo["fork"] == false }
+          data = data.sort_by! { |x| Date.parse x['updated_at'] }.reverse!
+        end
+        # Retrun final context
+        context[$1] = data
         nil
       else
         # syntax error

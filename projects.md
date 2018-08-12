@@ -17,7 +17,7 @@ meta: {}
     <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
       <div class="post-details">
         <h2 itemprop="name headline">
-          <a href="'+repo.html_url+'" target="_blank"> {{ repo.name }}</a>
+          <a href="{{repo.html_url}}" target="_blank"> {{ repo.name }}</a>
         </h2>
         <p class="post-excerpt">{{ repo.description }}</p>
         <p class="post-meta">
