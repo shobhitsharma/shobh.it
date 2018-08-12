@@ -21,10 +21,14 @@ meta: {}
         </h2>
         <p class="post-excerpt">{{ repo.description }}</p>
         <p class="post-meta">
-          <time>{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-          {{ repo.updated_at | date: date_format }}
-          &nbsp; • &nbsp; <span class="post-tags"><a class="tag">{{ repo.language }}</a></span>
-          </time>&nbsp; • &nbsp; {{ repo.stargazers_count }} stars / {{ repo.forks_count }} forks
+          <span class="post-tags"><a class="tag">{{ repo.language }}</a></span>
+          &nbsp; • &nbsp; 
+          {{ repo.stargazers_count }} stars / {{ repo.forks_count }} forks
+          &nbsp; • &nbsp; 
+          <time>
+            {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+            Last updated on {{ repo.updated_at | date: date_format }}
+          </time>
         </p>
       </div>
     </article>
