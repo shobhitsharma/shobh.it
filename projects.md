@@ -34,9 +34,9 @@ $.ajax({
         $('#my-repos').append(
           '<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">' +
             '<div class="post-details">' +
-              '<h1 class="post-title" itemprop="name headline">' +
+              '<h2 itemprop="name headline">' +
                 '<a href="'+repo.html_url+'" target="_blank">'+repo.name+'</a>' +
-              '</h1>' +
+              '</h2>' +
               '<p class="post-excerpt">'+repo.description+'</p>' +
               '<p class="post-meta">' +
                 '<time>'+new Date(repo.updated_at).toLocaleString('en-GB')+

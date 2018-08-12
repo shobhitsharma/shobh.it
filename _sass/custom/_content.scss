@@ -3,6 +3,9 @@ $title-inactive-color: #9c9c9c;
 $post-meta-color: #666666;
 .page-wrapper {
   max-width: $content-width;
+  > h1 {
+    margin-bottom: 25px;
+  }
 }
 
 .page-content {
@@ -257,8 +260,6 @@ $post-meta-color: #666666;
 
 .archive-post-list {
   .archive-post-year {
-    border-left: 1px solid $border-color;
-    padding-left: 25px;
     margin-bottom: 50px;
     .archive-post-articles {
       display: block;
@@ -268,7 +269,6 @@ $post-meta-color: #666666;
         color: $font-color-lite;
         margin: 0;
         width: 150px;
-        text-align: right;
         padding-right: 15px;
       }
       .archive-title {
