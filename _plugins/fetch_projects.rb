@@ -16,7 +16,7 @@ module FetchProjects
         # Filter and sort repositories
         if data.length > 0
           data = data.select { |repo| repo["fork"] == false }
-          data = data.sort_by! { |x| Date.parse x['updated_at'] }.reverse!
+          data = data.sort_by { |x| Date.parse x['updated_at'] }.reverse!
         end
         # Retrun final context
         context[$1] = data

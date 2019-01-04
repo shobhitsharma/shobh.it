@@ -1,9 +1,11 @@
 $title-color: #111;
 $title-inactive-color: #9c9c9c;
 $post-meta-color: #666666;
+
 .page-wrapper {
   max-width: $content-width;
-  > h1 {
+
+  >h1 {
     margin-bottom: 25px;
   }
 }
@@ -23,10 +25,15 @@ $post-meta-color: #666666;
 .post-content {
   width: $content-width;
   margin: 0 auto;
+  box-shadow: $base-box-shadow;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 6px;
 }
 
 .pagination {
   text-align: center;
+
   .next,
   .previous {
     border: 1px solid $brand-color;
@@ -36,8 +43,10 @@ $post-meta-color: #666666;
     font-size: 14px;
     font-weight: 600;
   }
+
   a {
     color: $title-color;
+
     &:hover {
       color: $link-color;
     }
@@ -49,6 +58,7 @@ $post-meta-color: #666666;
     display: table;
     width: 1024px;
     margin: 25px auto;
+
     .post-cover {
       display: table-cell;
       position: relative;
@@ -56,6 +66,7 @@ $post-meta-color: #666666;
       vertical-align: middle;
       padding-right: 25px;
     }
+
     .post-image {
       display: table-cell;
       width: 50%;
@@ -85,23 +96,37 @@ $post-meta-color: #666666;
     padding: 0;
     margin-bottom: $spacing-unit;
   }
+
   .post {
-    min-height: 135px;
+    box-shadow: $base-box-shadow;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out 0s;
+
+    &:hover {
+      box-shadow: $base-box-shadow-hover;
+    }
   }
+
   .post-image {
     display: table-cell;
     width: 200px;
     height: 135px;
   }
+
   .post-details {
     display: table-cell;
     vertical-align: top;
   }
+
   .post-meta {
     margin-bottom: 0;
     color: $post-meta-color;
   }
+
   @media screen and (max-width: 600px) {
+
     .post-image,
     .post-details {
       display: block;
@@ -116,9 +141,11 @@ $post-meta-color: #666666;
   img {
     max-width: calc(100% - 10px);
   }
+
   img.inline-img {
     margin: 20px;
   }
+
   h1 {
     border-bottom: rgb(234, 236, 239);
     border-bottom-style: solid;
@@ -130,6 +157,7 @@ $post-meta-color: #666666;
     margin-top: 24px;
     margin-bottom: 15px;
   }
+
   h2 {
     font-size: 24px;
     font-weight: 600;
@@ -140,6 +168,7 @@ $post-meta-color: #666666;
     margin-top: 24px;
     margin-bottom: 15px;
   }
+
   h3 {
     font-size: 18px;
     font-weight: 600;
@@ -148,6 +177,7 @@ $post-meta-color: #666666;
     margin-top: 24px;
     margin-bottom: 16px;
   }
+
   h4 {
     font-size: 16px;
     font-weight: 600;
@@ -155,6 +185,7 @@ $post-meta-color: #666666;
     margin-top: 24px;
     margin-bottom: 16px;
   }
+
   h5 {
     color: rgb(36, 41, 46);
     font-size: 14px;
@@ -184,13 +215,16 @@ $post-meta-color: #666666;
   a {
     color: $title-color;
     text-decoration: none;
+
     &:hover {
       color: #0037F5;
     }
   }
+
   font-weight: 600;
   @include relative-font-size(2);
   line-height: 1.4em;
+
   @include media-query($on-laptop) {
     @include relative-font-size(2);
   }
@@ -200,6 +234,7 @@ $post-meta-color: #666666;
   border-top: none;
   border-bottom: none;
   height: 100px;
+
   .site-title {
     color: $title-color;
     font-weight: 700;
@@ -208,13 +243,16 @@ $post-meta-color: #666666;
     margin-top: 30px;
     text-decoration: none;
   }
+
   .navigation-items {
     margin-top: 20px;
+
     a {
       color: $title-inactive-color;
       margin-right: 20px;
       padding-left: 10px;
       text-decoration: none;
+
       &.active {
         color: $title-color;
       }
@@ -236,6 +274,7 @@ $post-meta-color: #666666;
 
 .post-meta {
   margin-top: -5px;
+
   * {
     color: $font-color-lite;
   }
@@ -243,15 +282,29 @@ $post-meta-color: #666666;
 
 .page-content {
   padding-top: 0px;
+
   .home {
+
+    .home-headline {
+      margin-bottom: 15px;
+      h2 {
+        margin-bottom: 0;
+      }
+      p {
+        color: $grey-color;
+      }
+    }
+
     .post-title {
       font-weight: 600;
       @include relative-font-size(1.4);
       line-height: 1.4em;
+
       @include media-query($on-laptop) {
         @include relative-font-size(1.4);
       }
     }
+
     .post-meta {
       margin-top: -10px;
     }
@@ -261,9 +314,11 @@ $post-meta-color: #666666;
 .archive-post-list {
   .archive-post-year {
     margin-bottom: 50px;
+
     .archive-post-articles {
       display: block;
       width: 100%;
+
       .archive-tag {
         font-size: 80%;
         color: $font-color-lite;
@@ -271,34 +326,42 @@ $post-meta-color: #666666;
         width: 150px;
         padding-right: 15px;
       }
+
       .archive-title {
         color: $link-color;
       }
     }
   }
+
   h1 {
     font-weight: 700;
   }
+
   ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+
     li {
       display: table;
       width: 100%;
+
       span {
         display: table-cell;
       }
     }
   }
+
   @media screen and (max-width: 600px) {
     .archive-post-articles {
       ul li {
         margin-bottom: 15px;
+
         span {
           display: block;
         }
       }
+
       .archive-tag {
         text-align: left !important;
       }

@@ -45,15 +45,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  -webkit-font-kerning: normal;
-  font-kerning: normal;
-  -webkit-font-feature-settings: "kern";
-  font-feature-settings: "kern";
-  -webkit-font-variant-ligatures: common-ligatures;
-  font-variant-ligatures: common-ligatures;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -164,11 +155,11 @@ h6 {
 a {
   color: $brand-color;
   text-decoration: none;
-  &:visited {
-    color: darken($brand-color, 15%);
-  }
+  // &:visited {
+  //   color: darken($brand-color, 15%);
+  // }
   &:hover {
-    color: $text-color;
+    color: lighten($brand-color, 15%);
     text-decoration: underline;
   }
   .social-media-list &:hover {

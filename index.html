@@ -5,6 +5,10 @@ title: Home
 
 <div class="home posts-list">
   {% include author.html %}
+  <div class="home-headline">
+    <h2>Recent Posts</h2>
+    <p>What I'm writing about</p>
+  </div>
   {% for post in paginator.posts %}
     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
       <!-- {% if post.image %}
