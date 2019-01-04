@@ -22,12 +22,6 @@ footer {
   }
 }
 
-h1,
-h2,
-h3 {
-  color: #111;
-}
-
 hr {
   color: $border-color;
   background-color: $border-color;
@@ -74,7 +68,7 @@ h4,
 h5,
 b {
   font-family: $base-font-family-bold;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 svg {

@@ -3,6 +3,7 @@ $title-inactive-color: #9c9c9c;
 $post-meta-color: #666666;
 
 .page-wrapper {
+  position: relative;
   max-width: $content-width;
 
   >h1 {
@@ -10,9 +11,16 @@ $post-meta-color: #666666;
   }
 }
 
+.page-bg-shadow {
+  box-shadow: $base-box-shadow;
+  background: rgb(255, 255, 255);
+  border-radius: 6px;
+  padding: 25px;
+}
+
 .page-content {
   .home {
-    width: $content-width;
+    max-width: $content-width;
     margin: 0 auto;
   }
 }
@@ -20,10 +28,15 @@ $post-meta-color: #666666;
 .profile-image {
   border-radius: 50%;
   margin-bottom: 15px;
+
+  &.is-floating {
+    float: right;
+    margin-left: 25px;
+  }
 }
 
 .post-content {
-  width: $content-width;
+  max-width: $content-width;
   margin: 0 auto;
   box-shadow: $base-box-shadow;
   background: #ffffff;
@@ -56,8 +69,9 @@ $post-meta-color: #666666;
 .post {
   .post-header {
     display: table;
-    width: 1024px;
+    width: 100%;
     margin: 25px auto;
+    max-width: 1024px;
 
     .post-cover {
       display: table-cell;
@@ -71,6 +85,19 @@ $post-meta-color: #666666;
       display: table-cell;
       width: 50%;
       height: 300px;
+      border-radius: 8px;
+      box-shadow: $base-box-shadow-hover;
+    }
+  }
+
+
+  @media screen and (max-width: 800px) {
+    .post-header {
+      .post-cover,
+      .post-image {
+        width: 100%;
+        display: block;
+      }
     }
   }
 }
@@ -286,10 +313,12 @@ $post-meta-color: #666666;
   .home {
 
     .home-headline {
-      margin-bottom: 15px;
+      margin-bottom: 25px;
+
       h2 {
         margin-bottom: 0;
       }
+
       p {
         color: $grey-color;
       }
@@ -313,7 +342,13 @@ $post-meta-color: #666666;
 
 .archive-post-list {
   .archive-post-year {
-    margin-bottom: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $border-color;
+
+    &:last-child {
+      border-bottom: 0;
+    }
 
     .archive-post-articles {
       display: block;
@@ -345,10 +380,15 @@ $post-meta-color: #666666;
     li {
       display: table;
       width: 100%;
+      padding: 10px;
 
       span {
         display: table-cell;
       }
+    }
+
+    li+li {
+      margin-top: 0;
     }
   }
 

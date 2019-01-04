@@ -70,6 +70,8 @@
     input~.trigger {
       clear: both;
       display: none;
+      width: 100px;
+      float: right;
     }
     input:checked~.trigger {
       display: block;
